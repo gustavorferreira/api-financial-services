@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\RegistrationOriginController;
+use App\Http\Controllers\Api\RevenueTypesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,4 @@ use App\Http\Controllers\Api\RegistrationOriginController;
 //});
 
 Route::apiResource('origins', RegistrationOriginController::class);
+Route::apiResource('revenues-types', RevenueTypesController::class);
