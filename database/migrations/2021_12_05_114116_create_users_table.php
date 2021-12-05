@@ -13,14 +13,16 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
+        Schema::create('sch_register.users', function (Blueprint $table) {
+            $table->integer('idpeo');
+            $table->string('nick_name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+
+            $table->foreign('idpeo')->references('idpeo')->on('sch_register.peoples');
         });
     }
 
