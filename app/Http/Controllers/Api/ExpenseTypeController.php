@@ -10,8 +10,8 @@ class ExpenseTypeController extends Controller
 {
     public function index()
     {
-        $revenue = ExpenseType::all();
-        return response()->json($revenue);
+        $expense = ExpenseType::all();
+        return response()->json($expense);
     }
 
     public function store(Request $request)
@@ -33,32 +33,32 @@ class ExpenseTypeController extends Controller
 
     public function show($id)
     {
-        $revenue = ExpenseType::findOrFail($id);
-        return response()->json($revenue);
+        $expense = ExpenseType::findOrFail($id);
+        return response()->json($expense);
     }
 
     public function update(Request $request, $id)
     {
-        $revenue = ExpenseType::findOrFail($id);
+        $expense = ExpenseType::findOrFail($id);
 
         $request->validate([
             'expense_name' => 'required|max:255',
             'description' => 'required|max:255'
         ]);
 
-        $revenue->expense_name = $request->get('expense_name');
-        $revenue->description = $request->get('description');
+        $expense->expense_name = $request->get('expense_name');
+        $expense->description = $request->get('description');
 
-        $revenue->save();
+        $expense->save();
 
-        return response()->json($revenue);
+        return response()->json($expense);
     }
 
     public function destroy($id)
     {
-        $revenue = ExpenseType::findOrFail($id);
-        $revenue->delete();
+        $expense = ExpenseType::findOrFail($id);
+        $expense->delete();
 
-        return response()->json($revenue::all());
+        return response()->json($expense::all());
     }
 }

@@ -10,8 +10,8 @@ class StatusController extends Controller
 {
     public function index()
     {
-        $revenue = Status::all();
-        return response()->json($revenue);
+        $status = Status::all();
+        return response()->json($status);
     }
 
     public function store(Request $request)
@@ -33,32 +33,32 @@ class StatusController extends Controller
 
     public function show($id)
     {
-        $revenue = Status::findOrFail($id);
-        return response()->json($revenue);
+        $status = Status::findOrFail($id);
+        return response()->json($status);
     }
 
     public function update(Request $request, $id)
     {
-        $revenue = Status::findOrFail($id);
+        $status = Status::findOrFail($id);
 
         $request->validate([
             'status_name' => 'required|max:255',
             'description' => 'required|max:255'
         ]);
 
-        $revenue->status_name = $request->get('status_name');
-        $revenue->description = $request->get('description');
+        $status->status_name = $request->get('status_name');
+        $status->description = $request->get('description');
 
-        $revenue->save();
+        $status->save();
 
-        return response()->json($revenue);
+        return response()->json($status);
     }
 
     public function destroy($id)
     {
-        $revenue = Status::findOrFail($id);
-        $revenue->delete();
+        $status = Status::findOrFail($id);
+        $status->delete();
 
-        return response()->json($revenue::all());
+        return response()->json($status::all());
     }
 }

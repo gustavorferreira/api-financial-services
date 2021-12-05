@@ -10,8 +10,8 @@ class PaymentController extends Controller
 {
     public function index()
     {
-        $revenue = Payment::all();
-        return response()->json($revenue);
+        $payment = Payment::all();
+        return response()->json($payment);
     }
 
     public function store(Request $request)
@@ -33,32 +33,32 @@ class PaymentController extends Controller
 
     public function show($id)
     {
-        $revenue = Payment::findOrFail($id);
-        return response()->json($revenue);
+        $payment = Payment::findOrFail($id);
+        return response()->json($payment);
     }
 
     public function update(Request $request, $id)
     {
-        $revenue = Payment::findOrFail($id);
+        $payment = Payment::findOrFail($id);
 
         $request->validate([
             'expense_type_id' => 'required|max:255',
             'payment_date' => 'required|max:255'
         ]);
 
-        $revenue->expense_type_id = $request->get('expense_type_id');
-        $revenue->payment_date = $request->get('payment_date');
+        $payment->expense_type_id = $request->get('expense_type_id');
+        $payment->payment_date = $request->get('payment_date');
 
-        $revenue->save();
+        $payment->save();
 
-        return response()->json($revenue);
+        return response()->json($payment);
     }
 
     public function destroy($id)
     {
-        $revenue = Payment::findOrFail($id);
-        $revenue->delete();
+        $payment = Payment::findOrFail($id);
+        $payment->delete();
 
-        return response()->json($revenue::all());
+        return response()->json($payment::all());
     }
 }
