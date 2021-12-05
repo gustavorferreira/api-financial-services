@@ -17,6 +17,7 @@ class CreateTbPaymentsTable extends Migration
             $table->integer('idpeo');
             $table->integer('expense_type_id');
             $table->timestamp('payment_date');
+            $table->timestamps();
 
             $table->foreign('idpeo')->references('idpeo')->on('sch_register.peoples');
             $table->foreign('expense_type_id')->references('id')->on('sch_financial.expenses_types');

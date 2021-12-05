@@ -20,6 +20,7 @@ class CreateRevenuesTable extends Migration
             $table->integer('fees')->nullable();
             $table->date('revenue_date');
             $table->date('reference_date');
+            $table->timestamps();
 
             $table->foreign('idpeo')->references('idpeo')->on('sch_register.peoples');
             $table->foreign('revenue_type_id')->references('id')->on('sch_financial.revenues_types');

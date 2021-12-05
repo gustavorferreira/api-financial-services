@@ -20,6 +20,7 @@ class CreateExpensesTable extends Migration
             $table->integer('fees')->nullable();
             $table->date('expense_date');
             $table->date('reference_date');
+            $table->timestamps();
 
             $table->foreign('idpeo')->references('idpeo')->on('sch_register.peoples');
             $table->foreign('expense_type_id')->references('id')->on('sch_financial.expenses_types');
