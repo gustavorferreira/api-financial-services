@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\RegistrationOriginController;
 use App\Http\Controllers\Api\RevenueTypesController;
+use App\Http\Controllers\Api\ExpenseTypeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,4 @@ use App\Http\Controllers\Api\RevenueTypesController;
 
 Route::apiResource('origins', RegistrationOriginController::class);
 Route::apiResource('revenues-types', RevenueTypesController::class);
+Route::apiResource('expenses-types', ExpenseTypeController::class);
