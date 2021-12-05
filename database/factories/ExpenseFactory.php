@@ -4,9 +4,9 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\People;
-use App\Models\RevenuesTypes;
+use App\Models\ExpenseType;
 
-class RevenuesFactory extends Factory
+class ExpenseFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,10 +17,10 @@ class RevenuesFactory extends Factory
     {
         return [
             'idpeo' => People::all()->random()->idpeo,
-            'revenue_type_id' => RevenuesTypes::all()->random()->id,
+            'expense_type_id' => ExpenseType::all()->random()->id,
             'value' => $this->faker->randomDigit(),
             'fees' => $this->faker->randomNumber(),
-            'revenue_date' => $this->faker->date(),
+            'expense_date' => $this->faker->date(),
             'reference_date' => $this->faker->date()
         ];
     }

@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Revenues extends Model
+class Expense extends Model
 {
     use HasFactory;
 
-    protected $table = 'sch_financial.revenues';
+    protected $table = 'sch_financial.expenses';
     protected $primaryKey = 'idpeo';
     protected $fillable = [
-      'revenue_type_id',
-      'value',
-      'fees',
-      'revenue_date',
-      'reference_date'
+        'expense_type_id',
+        'value',
+        'fees',
+        'expense_date',
+        'reference_date'
     ];
 }

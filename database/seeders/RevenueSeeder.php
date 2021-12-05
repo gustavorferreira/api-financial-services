@@ -3,9 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Revenues;
+use App\Models\Revenue;
 
-class RevenuesSeeder extends Seeder
+class RevenueSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,7 +14,7 @@ class RevenuesSeeder extends Seeder
      */
     public function run()
     {
-        Revenues::factory()
+        Revenue::factory()
             ->count(5)
             ->create();
     }

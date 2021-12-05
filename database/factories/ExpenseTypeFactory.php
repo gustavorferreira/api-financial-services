@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class RevenuesTypesFactory extends Factory
+class ExpenseTypeFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,7 +14,7 @@ class RevenuesTypesFactory extends Factory
     public function definition()
     {
         return [
-            'revenue_name' => $this->faker->name(),
+            'expense_name' => $this->faker->name(),
             'description' => $this->faker->text(15)
         ];
     }
