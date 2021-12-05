@@ -10,6 +10,7 @@ use App\Http\Controllers\Api\PaymentController;
 use App\Http\Controllers\Api\RevenueController;
 use App\Http\Controllers\Api\ExpenseController;
 use App\Http\Controllers\Api\PeopleController;
+use App\Http\Controllers\Api\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,4 @@ Route::apiResource('payments', PaymentController::class);
 Route::apiResource('revenues', RevenueController::class);
 Route::apiResource('expenses', ExpenseController::class);
 Route::apiResource('peoples', PeopleController::class);
+Route::apiResource('users', UserController::class);
