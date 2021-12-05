@@ -6,7 +6,7 @@ use App\Http\Requests\StoreExpenseTypeRequest;
 use App\Http\Requests\UpdateExpenseTypeRequest;
 use App\Models\ExpenseType;
 
-class ExpensesTypesController extends Controller
+class ExpenseTypeController extends Controller
 {
     /**
      * Display a listing of the resource.
