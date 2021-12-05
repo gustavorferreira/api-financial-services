@@ -16,7 +16,8 @@ class PeopleFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name(),
+            'first_name' => $this->faker->firstName(),
+            'last_name' => $this->faker->lastName(),
             'registration_origin_id' => RegistrationOrigin::all()->random()->id,
             'status_id' => Status::all()->random()->id
         ];

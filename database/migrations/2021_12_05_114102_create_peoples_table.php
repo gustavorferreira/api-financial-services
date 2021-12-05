@@ -15,7 +15,8 @@ class CreatePeoplesTable extends Migration
     {
         Schema::create('sch_register.peoples', function (Blueprint $table) {
             $table->increments('idpeo');
-            $table->string('name');
+            $table->string('first_name');
+            $table->string('last_name');
             $table->integer('registration_origin_id');
             $table->integer('status_id');
             $table->timestamps();

@@ -12,7 +12,8 @@ class People extends Model
     protected $table = 'sch_register.peoples';
     protected $primaryKey = 'idpeo';
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
         'registration_origin_id',
         'status_id'
     ];
