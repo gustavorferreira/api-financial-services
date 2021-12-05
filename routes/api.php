@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\RevenueTypesController;
 use App\Http\Controllers\Api\ExpenseTypeController;
 use App\Http\Controllers\Api\StatusController;
 use App\Http\Controllers\Api\PaymentController;
+use App\Http\Controllers\Api\RevenueController;
 use App\Http\Controllers\Api\ExpenseController;
 
 /*
@@ -29,4 +30,5 @@ Route::apiResource('revenues-types', RevenueTypesController::class);
 Route::apiResource('expenses-types', ExpenseTypeController::class);
 Route::apiResource('statuses', StatusController::class);
 Route::apiResource('payments', PaymentController::class);
+Route::apiResource('revenues', RevenueController::class);
 Route::apiResource('expenses', ExpenseController::class);
