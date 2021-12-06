@@ -46,3 +46,8 @@ Pré requisitos para executar o projeto:
 ## Verificar as rotas da API
 
 - php artisan route:list 
+
+## Modelagem do Banco de Dados![modelagem-banco]
+
+(https://user-images.githubusercontent.com/48185499/144934015-7183fae2-6d34-4bfc-a17e-43ee38acfbfc.png)
+
