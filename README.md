@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Sistema de controle financeiro
+## Sistema de controle financeiro via API
 
 Pré requisitos para executar o projeto:
 
