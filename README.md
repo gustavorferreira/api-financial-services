@@ -42,3 +42,7 @@ Pré requisitos para executar o projeto:
 
 - php artisan serve
   - http://127.0.0.1:8000
+
+## Verificar as rotas da API
+
+- php artisan route:list 
