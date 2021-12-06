@@ -25,6 +25,10 @@ Pré requisitos para executar o projeto:
 - Composer
 - Postgres >= 12
 
+## Instalar projeto via composer
+
+- composer install
+
 ## Popular o banco de dados via terminal
 
 - php artisan migrate &&
