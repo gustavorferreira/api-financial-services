@@ -29,6 +29,10 @@ Pré requisitos para executar o projeto:
 
 - composer install
 
+## Configurar Banco de dados via terminal
+
+- cp .env.example .env
+
 ## Popular o banco de dados via terminal
 
 - php artisan migrate &&
