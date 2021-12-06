@@ -9,7 +9,7 @@ class Status extends Model
 {
     use HasFactory;
 
-    protected $table = 'sch_register.statuses';
+    protected $table = 'statuses';
     protected $primaryKey = 'id';
     protected $fillable = [
         'status_name',

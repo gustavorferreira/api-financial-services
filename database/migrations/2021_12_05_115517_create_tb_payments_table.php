@@ -13,14 +13,14 @@ class CreateTbPaymentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sch_financial.payments', function (Blueprint $table) {
+        Schema::create('payments', function (Blueprint $table) {
             $table->integer('idpeo');
             $table->integer('expense_type_id');
             $table->timestamp('payment_date');
             $table->timestamps();
 
-            $table->foreign('idpeo')->references('idpeo')->on('sch_register.peoples');
-            $table->foreign('expense_type_id')->references('id')->on('sch_financial.expenses_types');
+            $table->foreign('idpeo')->references('idpeo')->on('peoples');
+            $table->foreign('expense_type_id')->references('id')->on('expenses_types');
         });
     }
 

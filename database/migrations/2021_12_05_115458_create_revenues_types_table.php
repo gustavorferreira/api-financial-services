@@ -13,7 +13,7 @@ class CreateRevenuesTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('sch_financial.revenues_types', function (Blueprint $table) {
+        Schema::create('revenues_types', function (Blueprint $table) {
             $table->id();
             $table->string('revenue_name');
             $table->string('description')->nullable();

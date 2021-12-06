@@ -13,7 +13,7 @@ class CreateExpensesTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('sch_financial.expenses_types', function (Blueprint $table) {
+        Schema::create('expenses_types', function (Blueprint $table) {
             $table->id();
             $table->string('expense_name');
             $table->string('description')->nullable();

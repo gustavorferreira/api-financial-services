@@ -13,7 +13,7 @@ class CreateRegistrationsOriginsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sch_register.registrations_origins', function (Blueprint $table) {
+        Schema::create('registrations_origins', function (Blueprint $table) {
             $table->id();
             $table->string('system_name')->comment('Nome do sistema de Origem');
             $table->string('description')->nullable();

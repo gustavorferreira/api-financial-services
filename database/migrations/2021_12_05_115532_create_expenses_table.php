@@ -13,7 +13,7 @@ class CreateExpensesTable extends Migration
      */
     public function up()
     {
-        Schema::create('sch_financial.expenses', function (Blueprint $table) {
+        Schema::create('expenses', function (Blueprint $table) {
             $table->integer('idpeo');
             $table->integer('expense_type_id');
             $table->decimal('value', 5,2);
@@ -22,8 +22,8 @@ class CreateExpensesTable extends Migration
             $table->date('reference_date');
             $table->timestamps();
 
-            $table->foreign('idpeo')->references('idpeo')->on('sch_register.peoples');
-            $table->foreign('expense_type_id')->references('id')->on('sch_financial.expenses_types');
+            $table->foreign('idpeo')->references('idpeo')->on('peoples');
+            $table->foreign('expense_type_id')->references('id')->on('expenses_types');
         });
     }
 

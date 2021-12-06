@@ -9,7 +9,7 @@ class Revenue extends Model
 {
     use HasFactory;
 
-    protected $table = 'sch_financial.revenues';
+    protected $table = 'revenues';
     protected $primaryKey = 'idpeo';
     protected $fillable = [
       'revenue_type_id',

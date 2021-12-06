@@ -13,7 +13,7 @@ class CreatePeoplesTable extends Migration
      */
     public function up()
     {
-        Schema::create('sch_register.peoples', function (Blueprint $table) {
+        Schema::create('peoples', function (Blueprint $table) {
             $table->increments('idpeo');
             $table->string('first_name');
             $table->string('last_name');
@@ -21,8 +21,8 @@ class CreatePeoplesTable extends Migration
             $table->integer('status_id');
             $table->timestamps();
 
-            $table->foreign('registration_origin_id')->references('id')->on('sch_register.registrations_origins');
-            $table->foreign('status_id')->references('id')->on('sch_register.statuses');
+            $table->foreign('registration_origin_id')->references('id')->on('registrations_origins');
+            $table->foreign('status_id')->references('id')->on('statuses');
         });
     }
 

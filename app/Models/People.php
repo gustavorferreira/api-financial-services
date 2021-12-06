@@ -9,7 +9,7 @@ class People extends Model
 {
     use HasFactory;
 
-    protected $table = 'sch_register.peoples';
+    protected $table = 'peoples';
     protected $primaryKey = 'idpeo';
     protected $fillable = [
         'first_name',

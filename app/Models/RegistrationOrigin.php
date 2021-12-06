@@ -9,7 +9,7 @@ class RegistrationOrigin extends Model
 {
     use HasFactory;
 
-    protected $table = 'sch_register.registrations_origins';
+    protected $table = 'registrations_origins';
     protected $primaryKey = 'id';
     protected $fillable = [
       'system_name',

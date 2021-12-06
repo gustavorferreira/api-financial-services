@@ -13,7 +13,7 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('sch_register.users', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->integer('idpeo');
             $table->string('nick_name');
             $table->string('email')->unique();
@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
 
-            $table->foreign('idpeo')->references('idpeo')->on('sch_register.peoples');
+            $table->foreign('idpeo')->references('idpeo')->on('peoples');
         });
     }
 

@@ -9,7 +9,7 @@ class Payment extends Model
 {
     use HasFactory;
 
-    protected $table = 'sch_financial.payments';
+    protected $table = 'payments';
     protected $primaryKey = 'idpeo';
     protected $fillable = [
         'expense_type_id',
