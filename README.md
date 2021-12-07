@@ -60,7 +60,7 @@ Pré requisitos para executar o projeto:
   - php artisan db:seed --class=RevenueSeeder &&
   - php artisan db:seed --class=ExpenseSeeder
 
-- Configure sua varáivel ambiente `- cp .env.example .env` e o banco de dados.
+- Configure sua varáivel ambiente `cp .env.example .env` e o banco de dados.
 - Inicie o servidor Laravel `php artisan serve`
 - Agora você pode acessar [`http://localhost:8000`](http://localhost:8000) do seu navegador.
 - Veja as rotas de API `php artisan route:list`
